@@ -8,6 +8,10 @@ from django.utils import timezone
 from .models import Post
 
 
+def home(request):
+    return render(request, 'home.html', {})
+
+
 def post_feed(request):
     posts = Post.objects.filter(fecha_publicado__lte=timezone.now()).order_by('fecha_publicado')
     return render(request, 'blog/post_feed.html', {'posts': posts})
