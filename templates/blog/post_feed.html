@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Matias Candia Blog</title>
-</head>
-<body>
-  <h1>Matias Candia</h1>
-  <h2>Desarrollador Web | Analista SEO</h2>
+{% extends 'blog/base.html' %}
 
-  <div>
-    <h1><a href="/">Matias Candia Blog</a></h1>
-  </div>
-
+{% block content %}
   {% for post in posts %}
       <div>
           <p> publicado: {{ post.fecha_publicado }}</p>
-          <h2><a href="">{{ post.titulo }}</a></h2>
+          <h2><a href="{% url 'post_detalle' pk=post.pk %}">{{ post.titulo }}</a></h2>
           <p>{{ post.texto|linebreaksbr }}</p>
       </div>
   {% endfor %}
-</body>
-</html>
+{% endblock %}

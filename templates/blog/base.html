@@ -8,27 +8,24 @@
   <meta name="author" content="Matias Candia">
 
   {% block head_content %}{% endblock %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
-  <title>Matias Candia</title>
 
   {% load static %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+  <title>Matias Candia</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
 </head>
 <body>
 
-    {% include "nav.html" %}
+    <h1>Matias Candia</h1>
+    <h2>Desarrollador Web | Analista SEO</h2>
 
-    <div class="container mt-5">
-        {% block container %}
+
+
+    <div class="body">
+        {% block content %}
         {% endblock%}
     </div>
-
-
-
-
-
-
 
 </body>
 </html>
