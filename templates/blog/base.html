@@ -12,20 +12,40 @@
   {% load static %}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
   <title>Matias Candia</title>
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
 </head>
 <body>
 
-    <h1>Matias Candia</h1>
-    <h2>Desarrollador Web | Analista SEO</h2>
+  <navbar>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </navbar>
 
-
-
-    <div class="body">
-        {% block content %}
-        {% endblock%}
+  <section class="container">
+    <div class="header">
+      <div class="item">
+        <h1>Matias Candia</h1>
+        <h2>Desarrollador Web | Analista SEO</h2>
+      </div>
     </div>
+    <div class="sidebarL">sidebar 1</div>
+    <div class="contenido">
+      {% block content %}
+      {% endblock%}
+    </div>
+    <div class="sidebarR">sidebar 2</div>
+    <div class="footer">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </section>
+
+
 
 </body>
 </html>
