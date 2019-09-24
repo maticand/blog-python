@@ -1,22 +1,17 @@
 {% extends 'blog/base.html' %}
 
-
-  {% block title %}
-
-  <h2>{{ post.titulo }}</h2>
-  <p> publicado: {{ post.fecha_publicado }}</p>
+{% block title %}
+  <h1>{{ post.titulo }}</h1>
+  <h3> publicado: {{ post.fecha_publicado }}</h3>
 {% endblock %}
-
-
 
 {% block content %}
   <br>
   {% if post.fecha_publicado %}
-    <div class="date">
-      {{ post.fecha_publicado }}
-    </div>
+  <div class="date">
+    {{ post.fecha_publicado }}
+  </div>
   {% endif %}
   <p>{{ post.texto|linebreaksbr }}</p>
   <br>
-
-    {% endblock%}
+{% endblock%}
