@@ -1,0 +1,13 @@
+{% load static %}
+
+<navbar>
+  <ul class="navigation">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Sobre Mí</a></li>
+    <li><a href="#">CV</a></li>
+    <li><a href="#">Contacto</a></li>
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>+</a>
+    {% endif %}
+  </ul>
+</navbar>

@@ -1,4 +1,8 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
+
+{% block head_content %}
+  <title>Post Detalle</title>
+{% endblock %}
 
 {% block title %}
   <h1>{{ post.titulo }}</h1>
@@ -6,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-
   <br>
   {% if post.fecha_publicado %}
   <div class="date">
@@ -14,7 +17,7 @@
   </div>
   {% endif %}
   {% if user.is_authenticated %}
-      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span>editar</a>
+    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span>editar</a>
   {% endif %}
   <p>{{ post.texto|linebreaksbr }}</p>
   <br>
