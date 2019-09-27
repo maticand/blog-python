@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
 
     # Third Party
-    'pagedown.apps.PagedownConfig',
     'tinymce',
     'filebrowser',
 
