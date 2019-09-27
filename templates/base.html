@@ -19,8 +19,10 @@
   {% include "partials/navbar.html" %}
 
   <section class="container">
-    <div class="header">
-      <div class="item">
+    {% block header %}
+      <div class="header">
+    {% endblock %}
+      <div class="header-item">
         {% block title %}{% endblock %}
       </div>
     </div>

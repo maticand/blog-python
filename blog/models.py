@@ -1,6 +1,6 @@
 # Django
 from django.db import models
-
+from tinymce import HTMLField
 # Utilidades
 from django.utils import timezone
 
@@ -8,7 +8,7 @@ from django.utils import timezone
 class Post(models.Model):
     autor = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     titulo = models.CharField(max_length=200)
-    texto = models.TextField()
+    texto = HTMLField('texto')
     fecha_creado = models.DateTimeField(default=timezone.now)
     fecha_publicado = models.DateTimeField( blank=True, null=True)
 
