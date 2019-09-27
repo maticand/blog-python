@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block head_content %}
@@ -11,6 +12,7 @@
 {% block title %}
   <h1>{{ post.titulo }}</h1>
   <h3> publicado: {{ post.fecha_publicado }}</h3>
+  <h2>{{ post.autor}}</h2>
 {% endblock %}
 
 {% block content %}
