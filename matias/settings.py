@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Third Party
     'import_export',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# ckeditor configuraciones
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full', 
+    },
+}
