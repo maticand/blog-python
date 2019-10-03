@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Mis Apps
-    'aplicaciones.blog'
+    'aplicaciones.blog',
+
+    # Third Party
+    'import_export',
 ]
 
 MIDDLEWARE = [
