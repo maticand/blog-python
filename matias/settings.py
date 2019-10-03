@@ -134,6 +134,6 @@ STATICFILES_DIRS = (
 # ckeditor configuraciones
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'full', 
+        'toolbar': 'full',
     },
 }
