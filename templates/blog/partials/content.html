@@ -1,0 +1,33 @@
+{% load static %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      {% if posts %}
+        {% for post in posts %}
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                {{ post.titulo }}
+              </h2>
+              <h3 class="post-subtitle">
+                {{ post.descripcion}}
+              </h3>
+            </a>
+            <p class="post-meta">Escrito por
+              <a href="#">{{ post.autor }}</a> el
+              {{ post.fecha_publicado }}</p>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>No exiten post registrados</p>
+        {% endif %}
+        <hr>
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Posts Anteriores &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>

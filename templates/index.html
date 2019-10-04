@@ -34,128 +34,20 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'blog:index' %}">Matias Candia</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog:index' %}">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog:generales' %}">Sobre Mi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog:index' %}">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog:index' %}">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  {% include "blog/partials/navbar.html" %}
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('{% block imagen %}{% static 'img/home-bg.jpg' %}{% endblock imagen %}')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h2>{% block titulo_principal %} Matias Candia Blog {% endblock titulo_principal %}</h2>
-            <span class="subheading">A Blog Theme by Start Bootstrap</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include "blog/partials/header.html" %}
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        {% if posts %}
-          {% for post in posts %}
-            <div class="post-preview">
-              <a href="post.html">
-                <h2 class="post-title">
-                  {{ post.titulo }}
-                </h2>
-                <h3 class="post-subtitle">
-                  {{ post.descripcion}}
-                </h3>
-              </a>
-              <p class="post-meta">Escrito por
-                <a href="#">{{ post.autor }}</a> el
-                {{ post.fecha_publicado }}</p>
-            </div>
-        {% endfor %}
-        {% else %}
-          <p>No exiten post registrados</p>
-        {% endif %}
-        <hr>
+  {% include "blog/partials/content.html" %}
 
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  {% include "blog/partials/footer.html" %}
 
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
+  
   <!-- Custom scripts for this template -->
   <script src="{% static 'js/clean-blog.min.js' %}"></script>
 
-
 </body>
-
 </html>
