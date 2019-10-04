@@ -26,21 +26,21 @@ class PostResource(resources.ModelResource):
 
 class CategoriaAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     search_fields = ['nombre']
-    list_display = ('nombre','estado','fecha_creacion',)
+    list_display = ('nombre','estado','fecha_creacion', 'fecha_publicado',)
     list_filter = ('fecha_creacion',)
     resource_class = CategoriaResource
 
 
 class AutorAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     search_fields = ['nombre','apellido','correo']
-    list_display = ('nombre', 'apellido', 'correo', 'estado', 'fecha_creacion',)
+    list_display = ('nombre', 'apellido', 'correo', 'estado', 'fecha_creacion', 'fecha_publicado',)
     list_filter = ('nombre','apellido','correo','fecha_creacion',)
     resource_class = AutorResource
 
 
 class PostAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     search_fields = ['titulo','autor','categoria']
-    list_display = ('titulo','autor','categoria', 'estado', 'fecha_creacion',)
+    list_display = ('titulo','autor','categoria', 'estado', 'fecha_creacion', 'fecha_publicado',)
     list_filter = ('titulo','autor','categoria','fecha_creacion',)
     resource_class = PostResource
 

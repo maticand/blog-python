@@ -7,6 +7,7 @@ class Categoria(models.Model):
     nombre = models.CharField('Nombre de la Categoría', max_length=100, null=False, blank=False)
     estado = models.BooleanField('Activo/No Activo', default=True)
     fecha_creacion = models.DateField('Fecha de Creación', auto_now=False, auto_now_add=True)
+    fecha_publicado = models.DateField('Fecha de Publicado', blank=True, null=True)
 
     class Meta:
         verbose_name = 'Categoría'
@@ -27,13 +28,14 @@ class Autor(models.Model):
     correo = models.EmailField('Correo Electrónico', null=False, blank=False)
     estado = models.BooleanField('Activo/No Activo', default=True)
     fecha_creacion = models.DateField('Fecha de Creación', auto_now=False, auto_now_add=True)
+    fecha_publicado = models.DateField('Fecha de Publicado', blank=True, null=True)
 
     class Meta:
         verbose_name = 'Autor'
         verbose_name_plural = 'Autores'
 
     def __str__(self):
-        return "{0},{1}".format(self.apellido, self.nombre)
+        return "{0} {1}".format(self.nombre, self.apellido)
 
 
 class Post(models.Model):
@@ -47,6 +49,7 @@ class Post(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     estado = models.BooleanField('Publicado/No Publicado', default=True)
     fecha_creacion = models.DateField('Fecha de Creación', auto_now=False, auto_now_add=True)
+    fecha_publicado = models.DateField('Fecha de Publicado', blank=True, null=True)
 
     class Meta:
         verbose_name = 'Post'

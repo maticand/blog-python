@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Post, Categoria
 
 def index(request):
-    posts = Post.objects.filter(estado = True).order_by('fecha_creacion')
+    posts = Post.objects.filter(estado = True).order_by('fecha_publicado')
     return render(request,'index.html',{'posts':posts})
 
 def amp(request):
