@@ -50,34 +50,39 @@
     </div>
   </header>
 
-  {% block barra_busqueda %}
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 search">
-        <form method="get">
-          <div id="custom-search-input">
-            <div class="input-group col-md-12">
-              <input type="text" class="form-control" placeholder="Buscar.." name="buscar" value="{{ request.GET.buscar }}">
-              <span class="input-group-list">
-                <i class="icon icon-search"></i>
-                <button type="submit" class="boton btn-primary">Buscar</button>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  {% endblock barra_busqueda %}
+
 
   <!-- Main Content -->
   <div class="container">
+
     <div class="row">
+
       <div class="col-lg-8 col-md-10 mx-auto">
+
         {% block contenido %}
+        {% block barra_busqueda %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 search">
+              <form method="get">
+                <div id="custom-search-input">
+                  <div class="input-group col-md-12">
+                    <input type="text" class="form-control" placeholder="Buscar.." name="buscar" value="{{ request.GET.buscar }}">
+                    <span class="input-group-list">
+                      <i class="icon icon-search"></i>
+                      <button type="submit" class="boton btn-primary">Buscar</button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {% endblock barra_busqueda %}
         {% if posts %}
         {% for post in posts %}
         <div class="post-preview">
+
           <a href="{% url 'blog:detallePost' post.slug %}">
             <h2 class="post-title">
               {{ post.titulo }}
@@ -91,6 +96,7 @@
             {{ post.fecha_publicado }}</p>
           </div>
           {% endfor %}
+
           {% else %}
           <p>No exiten post registrados</p>
           {% endif %}

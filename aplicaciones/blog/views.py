@@ -39,7 +39,7 @@ def seo(request):
     categoria = Categoria.objects.get(nombre__iexact = 'seo')
     ).order_by('-fecha_publicado')
 
-    paginator = Paginator(posts, 1)
+    paginator = Paginator(posts, 2)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     return render(request, 'blog/seo.html', {'posts': posts})
