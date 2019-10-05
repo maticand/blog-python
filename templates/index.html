@@ -1,4 +1,5 @@
 {% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>{% block titulo %} Matias Candia {% endblock titulo %}</title>
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-touch-icon.png' %}">
@@ -30,24 +29,96 @@
   <link href="{% static 'css/clean-blog.css' %}" rel="stylesheet">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+  <title>{% block titulo %} Inicio {% endblock titulo %}</title>
 </head>
-
 <body>
 
   {% include "blog/partials/navbar.html" %}
 
-  {% include "blog/partials/header.html" %}
+  <!-- Header  -->
+  <header class="masthead" style="background-image: url('{% block imagen %}{% static 'img/home-bg.jpg' %}{% endblock imagen %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h2>{% block titulo_principal %} Matias Candia Blog {% endblock titulo_principal %}</h2>
+            <span class="subheading">{% block subtitulo_principal %} Analista de Sistemas | Desarrolador Web {% endblock subtitulo_principal %}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  {% include "blog/partials/content.html" %}
+  {% block barra_busqueda %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 search">
+        <form method="get">
+          <div id="custom-search-input">
+            <div class="input-group col-md-12">
+              <input type="text" class="form-control" placeholder="Buscar.." name="buscar" value="{{ request.GET.buscar }}">
+              <span class="input-group-list">
+                <i class="icon icon-search"></i>
+                <button type="submit" class="boton btn-primary">Buscar</button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endblock barra_busqueda %}
 
-  {% include "blog/partials/footer.html" %}
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% block contenido %}
+        {% if posts %}
+        {% for post in posts %}
+        <div class="post-preview">
+          <a href="{% url 'blog:detallePost' post.slug %}">
+            <h2 class="post-title">
+              {{ post.titulo }}
+            </h2>
+            <h3 class="post-subtitle">
+              {{ post.descripcion}}
+            </h3>
+          </a>
+          <p class="post-meta">Escrito por
+            <a href="#">{{ post.autor }}</a> el
+            {{ post.fecha_publicado }}</p>
+          </div>
+          {% endfor %}
+          {% else %}
+          <p>No exiten post registrados</p>
+          {% endif %}
+          {% endblock contenido %}
+          <hr>
+          <!-- Pager -->
+          <div class="clearfix">
+            {% if posts.has_previous %}
+              <a class="btn btn-primary float-right" href="?page={{ posts.previous_page_number }} {% if request.GET.search %} &q = {{ request.GET.search }}{% endif %}">Posts Siguientes &rarr;</a>
+            {% endif %}
+       
+            {% if posts.has_next %}
+              <a class="btn btn-primary float-left" href="?page={{ posts.next_page_number }} {% if request.GET.search %} &q = {{ request.GET.search }}{% endif %}">Posts Anteriores &rarr;</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  
-  <!-- Custom scripts for this template -->
-  <script src="{% static 'js/clean-blog.min.js' %}"></script>
+    {% include "blog/partials/footer.html" %}
 
-</body>
-</html>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
+  </body>
+  </html>

@@ -3,10 +3,11 @@ from . import views
 
 
 urlpatterns = [
-    path('amp', views.amp, name='amp'),
     path('', views.index, name='index'),
-    path('sobre-mi', views.sobremi, name='sobremi'),
-    path('about', views.about, name='about'),
+    path('sobremi', views.sobremi, name='sobremi'),
+    path('contacto', views.contacto, name='contacto'),
+    path('seo', views.seo, name='seo'),
+    path('<slug:slug>', views.detallePost, name='detallePost'),
 
 
     # path('post/<int:pk>/', views.post_detalle, name='post_detalle'),
