@@ -42,7 +42,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h2>{% block titulo_principal %} Matias Candia Blog {% endblock titulo_principal %}</h2>
+            <h2>{% block titulo_principal %} Matias Candia {% endblock titulo_principal %}</h2>
             <span class="subheading">{% block subtitulo_principal %} Analista de Sistemas | Desarrolador Web {% endblock subtitulo_principal %}</span>
           </div>
         </div>
@@ -101,7 +101,7 @@
             {% if posts.has_previous %}
               <a class="btn btn-primary float-right" href="?page={{ posts.previous_page_number }} {% if request.GET.search %} &q = {{ request.GET.search }}{% endif %}">Posts Siguientes &rarr;</a>
             {% endif %}
-       
+
             {% if posts.has_next %}
               <a class="btn btn-primary float-left" href="?page={{ posts.next_page_number }} {% if request.GET.search %} &q = {{ request.GET.search }}{% endif %}">Posts Anteriores &rarr;</a>
             {% endif %}
