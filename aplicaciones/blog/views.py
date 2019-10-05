@@ -21,6 +21,7 @@ def index(request):
     page = request.GET.get('page')
     posts = paginator.get_page(page)
 
+
     return render(request, 'index.html', {'posts': posts})
 
 
