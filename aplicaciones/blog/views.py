@@ -17,7 +17,7 @@ def index(request):
         Q(descripcion__icontains = queryset)
         ).distinct()
 
-    paginator = Paginator(posts, 1)
+    paginator = Paginator(posts, 5)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
 

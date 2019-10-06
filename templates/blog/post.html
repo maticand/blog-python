@@ -9,7 +9,7 @@
 {% block titulo_principal %} {{ detallePost.titulo }} {% endblock titulo_principal %}
 
 {% block subtitulo_principal %}
-  <p class="post-meta">Escrito por <a href="#">{{ detallePost.autor }}</a> el {{ detallePost.fecha_publicado }}</p>
+  <p class="post-meta"><a href="#">{{ detallePost.autor }}</a> | {{ detallePost.fecha_publicado }}</p> 
 {% endblock subtitulo_principal %}
 
 {% block barra_busqueda %}
