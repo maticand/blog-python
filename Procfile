@@ -1,1 +1,1 @@
-web: gunicorn matiasblog.wsgi
+web: gunicorn matias.wsgi

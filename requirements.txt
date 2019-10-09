@@ -21,6 +21,7 @@ coverage==4.5.1
 defusedxml==0.6.0
 diff-match-patch==20181111
 dj-markdown==0.1.2
+dj-static==0.0.6
 Django==2.2.5
 django-appconf==1.0.3
 django-appdata==0.2.1
@@ -73,7 +74,7 @@ html5lib==1.0.1
 idna==2.8
 imagesize==1.1.0
 jdcal==1.4.1
-Jinja2==2.10
+Jinja2==2.10.3
 lxml==4.4.1
 Markdown==3.1.1
 MarkupSafe==1.1.0
@@ -92,6 +93,7 @@ pinax-blog==7.0.4
 pinax-images==3.0.1
 pkginfo==1.5.0.1
 pluggy==0.6.0
+psycopg2==2.8.3
 py==1.7.0
 pycodestyle==2.5.0
 pyflakes==1.6.0
@@ -102,7 +104,7 @@ pytest-cov==2.5.1
 pytest-django==3.3.2
 pytest-runner==4.2
 pytz==2018.9
-PyYAML==3.13
+PyYAML==5.1.2
 readme-renderer==24.0
 regex==2019.8.19
 requests==2.21.0
@@ -114,13 +116,14 @@ Sphinx==1.7.8
 sphinx-rtd-theme==0.4.2
 sphinxcontrib-websupport==1.1.0
 sqlparse==0.3.0
+static3==0.7.0
 tablib==0.13.0
 toml==0.10.0
 tox==3.5.2
 tqdm==4.30.0
 twine==1.12.1
 Unidecode==1.0.23
-urllib3==1.24.1
+urllib3==1.25.6
 URLObject==2.4.3
 virtualenv==16.7.5
 watchdog==0.8.3
