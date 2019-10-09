@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Matias Candia">
@@ -42,11 +42,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h2>
+            <h1>
               {% block titulo_principal %}
                 <!-- Matias Candia -->
               {% endblock titulo_principal %}
-            </h2>
+            </h1>
             <span class="subheading">
               {% block subtitulo_principal %}
                 <!-- Analista de Sistemas | Desarrolador Web -->
@@ -90,9 +90,9 @@
             {% for post in posts %}
             <div class="post-preview">
               <a href="{% url 'blog:detallePost' post.slug %}">
-                <h2 class="post-title">
+                <h1 class="post-title">
                   {{ post.titulo }}
-                </h2>
+                </h1>
                 <h4 class="post-subtitle">
                   {{ post.descripcion}}
                 </h4>
