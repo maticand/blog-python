@@ -7,6 +7,7 @@ urlpatterns = [
     path('sobremi', views.sobremi, name='sobremi'),
     path('contacto', views.contacto, name='contacto'),
     path('seo', views.seo, name='seo'),
+    path('django', views.django, name='django'),
     path('<slug:slug>', views.detallePost, name='detallePost'),
 
 

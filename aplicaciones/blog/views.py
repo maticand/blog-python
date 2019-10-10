@@ -45,6 +45,18 @@ def seo(request):
     return render(request, 'blog/seo.html', {'posts': posts})
 
 
+def django(request):
+    posts = Post.objects.filter(
+    estado = True,
+    categoria = Categoria.objects.get(nombre__iexact = 'django')
+    ).order_by('-fecha_publicado')
+
+    paginator = Paginator(posts, 2)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+    return render(request, 'blog/django.html', {'posts': posts})
+
+
 def detallePost(request, slug):
     post = get_object_or_404(Post, slug = slug)
     return render(request, 'blog/post.html', {'detallePost': post})

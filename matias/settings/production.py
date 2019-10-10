@@ -1,9 +1,9 @@
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['matiasblog.herokuapp.com']
+ALLOWED_HOSTS = ['matiasblog.herokuapp.com', 'matiascandia.com.ar']
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
