@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1429px" height="760px" viewBox="0 0 1429 760" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>blog-post-header</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#059E9E" offset="0%"></stop>
+            <stop stop-color="#330867" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="39.7234178%" y1="4.68076544%" x2="44.6878472%" y2="21.4826885%" id="linearGradient-2">
+            <stop stop-color="#F4F8FB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Blog-Post" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-116.000000, -120.000000)" fill-rule="nonzero">
+            <g id="blog-post-header" transform="translate(116.000000, 120.000000)">
+                <rect id="Rectangle-Copy-2" fill="url(#linearGradient-1)" x="0" y="0" width="1429" height="760"></rect>
+                <path d="M608.124361,760 L0,760 L0,381.294249 C257.60354,404.655912 479.861531,550.441033 608.124361,760 Z" id="Combined-Shape" fill="url(#linearGradient-2)" opacity="0.100000001" style="mix-blend-mode: overlay;"></path>
+                <path d="M641.369756,760 L0,760 L0,288.90727 C287.551501,320.816496 529.011352,505.517378 641.369756,760 Z" id="Combined-Shape" fill="url(#linearGradient-2)" opacity="0.100000001" style="mix-blend-mode: overlay;"></path>
+                <path d="M1429,381.204191 L1429,760 L819.875639,760 C948.304409,550.169917 1170.97171,404.278801 1429,381.204191 Z" id="Combined-Shape" fill="url(#linearGradient-2)" opacity="0.100000001" style="mix-blend-mode: overlay;"></path>
+                <path d="M1429,288.796938 L1429,760 L786.630376,760 C899.118871,505.222433 1141.00837,320.388454 1429,288.796938 Z" id="Combined-Shape" fill="url(#linearGradient-2)" opacity="0.100000001" style="mix-blend-mode: overlay;"></path>
+            </g>
+        </g>
+    </g>
+</svg>
