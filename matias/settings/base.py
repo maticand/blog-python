@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     # Third Party
     'import_export',
-    'ckeditor',
+    'ckeditor', 
 ]
 
 MIDDLEWARE = [
