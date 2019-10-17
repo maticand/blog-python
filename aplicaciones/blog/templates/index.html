@@ -102,12 +102,12 @@
             {% for post in posts %}
             <div class="post-preview">
               <a href="{% url 'blog:detallePost' post.slug %}">
-                <h1 class="post-title">
+                <h2 class="post-title">
                   {{ post.titulo }}
-                </h1>
-                <h4 class="post-subtitle">
+                </h2>
+                <h5 class="post-subtitle">
                   {{ post.descripcion}}
-                </h4>
+                </h5>
               </a>
               <p class="post-meta post-meta-left"><a href="#">{{ post.autor }}</a> | {{ post.fecha_publicado }} </p>
             </div><br><br>
