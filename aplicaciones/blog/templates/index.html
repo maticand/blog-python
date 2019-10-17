@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Matias Candia">
+  <meta name="google-site-verification" content="RCHEBYWz0YL94bWMEcbZp8-y41Z5wgcZsXkLE8VfA2s" />
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-touch-icon.png' %}">
@@ -30,6 +31,17 @@
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <title>{% block titulo %} Inicio {% endblock titulo %}</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150348537-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-150348537-1');
+  </script>
+
 </head>
 <body>
 
