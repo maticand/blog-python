@@ -1,4 +1,4 @@
-##¿Por qué Django?
+¿Por qué Django?
 
 Django es un marco web escrito en Python. Un marco web es un software que admite el desarrollo de sitios web dinámicos, aplicaciones y servicios. Proporciona un conjunto de herramientas y funcionalidades que resuelve muchos problemas comunes asociados con el desarrollo web, como características de seguridad, acceso a bases de datos, sesiones, procesamiento de plantillas, enrutamiento de URL, internacionalización, localización y mucho más.
 
@@ -10,6 +10,6 @@ Django es uno de los frameworks web más populares escritos en Python. ofrece un
 
 El desarrollo de Django es respaldado por la Django Software Foundation, y está patrocinado por compañías como JetBrains e Instagram. Django está en desarrollo activo desde hace varios años, demostrando ser un marco web maduro, confiable y seguro.
 
-##¿Quién está usando Django?
+¿Quién está usando Django?
 
 Entre los sitios web más grandes que usan Django tenemos: Instagram, Disqus, Mozilla, Bitbucket, Last.fm, National Geographic. Para ver más ejemplos, puede ingresar a la base de datos de DjangoSites, que ofrecen una lista de más de 5 mil sitios web con tecnología Django.
