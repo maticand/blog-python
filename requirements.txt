@@ -22,7 +22,7 @@ defusedxml==0.6.0
 diff-match-patch==20181111
 dj-markdown==0.1.2
 dj-static==0.0.6
-Django==2.2.5
+Django==2.2.18
 django-appconf==1.0.3
 django-appdata==0.2.1
 django-blog-it==0.3.1
