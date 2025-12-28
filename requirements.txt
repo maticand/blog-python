@@ -29,7 +29,7 @@ django-blog-it==0.3.1
 django-blog-zinnia==0.20
 django-ckeditor==5.7.1
 django-classy-tags==0.9.0
-django-cms==3.6.0
+django-cms==3.6.1
 django-contrib-comments==1.9.1
 django-filer==1.5.0
 django-formtools==2.1
