@@ -125,7 +125,7 @@ twine==1.12.1
 Unidecode==1.0.23
 urllib3==1.25.6
 URLObject==2.4.3
-virtualenv==16.7.5
+virtualenv==20.36.1
 watchdog==0.8.3
 webencodings==0.5.1
 xlrd==1.2.0
